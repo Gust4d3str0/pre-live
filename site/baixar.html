@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Baixar o Pre-Live para Windows</title>
+<meta name="description" content="Baixe o instalador do Pre-Live para Windows 10 e 11, confira o SHA-256 e veja os requisitos.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0b0d14">
+<link rel="icon" type="image/png" href="assets/pre-live-icon-64.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/pre-live-icon-64.png" alt="" width="36" height="36">Pre-Live</a>
+    <nav aria-label="Principal">
+      <a href="./">Início</a>
+      <a href="baixar.html" aria-current="page">Baixar</a>
+      <a href="novidades.html">Novidades</a>
+      <a href="faq.html">Dúvidas</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Download</p>
+        <h1 style="font-size:clamp(2.1rem,4.6vw,3.3rem)">Baixar o Pre-Live</h1>
+        <p>Instalador para Windows. Instalação só para o seu usuário, sem precisar de administrador.</p>
+      </div>
+
+      <div class="release" id="release" aria-live="polite">
+        <div class="release-head">
+          <div>
+            <p class="eyebrow" style="margin-bottom:6px">Última versão estável</p>
+            <h2 id="release-version">Ainda não publicada</h2>
+          </div>
+          <a id="download" class="button primary" href="#" data-download data-strict>Baixar para Windows</a>
+        </div>
+        <dl>
+          <div><dt>Publicada em</dt><dd id="release-date">—</dd></div>
+          <div><dt>Tamanho</dt><dd id="release-size">—</dd></div>
+          <div><dt>Sistema</dt><dd>Windows 10 e 11, 64 bits</dd></div>
+        </dl>
+        <div>
+          <p class="small muted" style="margin-bottom:8px">SHA-256 do instalador</p>
+          <div class="hash">
+            <code id="sha">Publicado junto com a versão.</code>
+            <button id="copy-sha" class="button small" type="button" disabled>Copiar</button>
+          </div>
+        </div>
+        <p class="small muted" style="margin:0"><a data-release-page>Ver esta versão no GitHub</a> · <a href="novidades.html">O que mudou</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="instalar">
+    <div class="wrap">
+      <div class="section-head"><h2>Instalar</h2></div>
+      <ol class="steps">
+        <li><div><h3>Baixe e confira o arquivo</h3><p>Depois do download, abra o PowerShell na pasta do arquivo e rode o comando abaixo. O resultado precisa ser idêntico ao SHA-256 mostrado acima.</p><pre><code>Get-FileHash .\Pre-Live_*_x64-setup.exe -Algorithm SHA256</code></pre></div></li>
+        <li><div><h3>Execute o instalador</h3><p>Se o Windows não tiver o WebView2 (já vem no Windows 11), o instalador o baixa sozinho, o que exige internet.</p></div></li>
+        <li><div><h3>Abra o Pre-Live</h3><p>Escolha <em>Criar sala</em> e mande o convite, ou <em>Entrar em sala</em> e cole o convite que recebeu. Quem só vai assistir também precisa do aplicativo instalado.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="seguranca">
+    <div class="wrap cols">
+      <div>
+        <h2 style="font-size:1.7rem;margin-bottom:16px">Aviso de segurança do Windows</h2>
+        <p class="muted">O instalador <strong style="color:var(--text)">não é assinado digitalmente</strong> (certificado de assinatura de código é pago). Por isso o Windows pode mostrar “O Windows protegeu o computador” (SmartScreen).</p>
+        <ul class="list">
+          <li><strong>Só continue se o SHA-256 conferir</strong> e se você baixou esta página oficial.</li>
+          <li>Se o SHA-256 for diferente, <strong>não instale</strong>.</li>
+          <li>No aviso, <em>Mais informações</em> → <em>Executar assim mesmo</em> aparece apenas para este arquivo.</li>
+          <li><strong>Não desative</strong> o SmartScreen nem o antivírus.</li>
+          <li>Se o <em>Controle Inteligente de Aplicativos</em> (Smart App Control) estiver ligado, ele pode bloquear o instalador sem dar a opção de continuar. Nesse caso o Pre-Live não instala neste PC por enquanto. Não desligue o recurso só para isso: ele não volta a ligar sem reinstalar o Windows.</li>
+        </ul>
+      </div>
+      <div>
+        <h2 style="font-size:1.7rem;margin-bottom:16px">Requisitos</h2>
+        <ul class="list">
+          <li><strong>Windows 10 ou 11</strong>, 64 bits.</li>
+          <li><strong>Microsoft Edge WebView2 Runtime</strong>, instalado automaticamente quando falta.</li>
+          <li><strong>Internet estável.</strong> Quem transmite precisa de upload: veja a estimativa no próprio aplicativo antes de começar, principalmente em salas grandes.</li>
+          <li><strong>CPU</strong>: transmitir em 1080p usa bastante o processador. Se travar, baixe para 720p nas configurações.</li>
+        </ul>
+        <h2 style="font-size:1.7rem;margin:32px 0 16px">Desinstalar</h2>
+        <p class="muted">Configurações do Windows → Aplicativos → Aplicativos instalados → Pre-Live → Desinstalar.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="note">
+        <p style="margin:0"><strong>Limites conhecidos.</strong> Conexões entre redes diferentes ainda estão sendo validadas. Sem servidor de retransmissão, algumas redes (CGNAT, empresa, VPN) podem não conectar. Veja o que tentar em <a href="faq.html#nao-conecta">Não conecta, e agora?</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Pre-Live · para Windows 10 e 11 · a voz fica no Discord</p>
+    <nav aria-label="Rodapé"><a href="./">Início</a><a href="novidades.html">Novidades</a><a href="faq.html">Dúvidas</a><a data-release-page>Versões no GitHub</a></nav>
+  </div>
+</footer>
+<noscript><p class="wrap small muted" style="padding:16px 0">Ative o JavaScript para ver o link de download e o SHA-256 desta versão.</p></noscript>
+<script src="site.js"></script>
+</body>
+</html>

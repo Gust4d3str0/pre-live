@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Novidades do Pre-Live · Histórico de versões</title>
+<meta name="description" content="O que mudou em cada versão do Pre-Live: novidades, melhorias e correções.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0b0d14">
+<link rel="icon" type="image/png" href="assets/pre-live-icon-64.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/pre-live-icon-64.png" alt="" width="36" height="36">Pre-Live</a>
+    <nav aria-label="Principal">
+      <a href="./">Início</a>
+      <a href="baixar.html">Baixar</a>
+      <a href="novidades.html" aria-current="page">Novidades</a>
+      <a href="faq.html">Dúvidas</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Histórico de versões</p>
+        <h1 style="font-size:clamp(2.1rem,4.6vw,3.3rem)">Novidades</h1>
+        <p>O que mudou em cada versão. Só entra aqui o que já está no aplicativo.</p>
+      </div>
+
+      <article class="version-entry" data-release-version="0.8.0">
+        <div>
+          <p class="version-tag">0.8.0</p>
+          <p class="pill status">Em preparação · ainda não publicada</p>
+        </div>
+        <div>
+          <h2 style="font-size:clamp(1.5rem,3vw,2.1rem);margin-bottom:22px">Salas maiores, mais controle</h2>
+          <h3>Novidades</h3>
+          <ul>
+            <li><strong>Salas para 2, 4, 8 ou 10 pessoas</strong>, contando com o anfitrião. O padrão é 4, e o anfitrião pode mudar o limite depois de criar a sala, nunca abaixo de quantas pessoas já estão nela.</li>
+            <li><strong>Transmissão para vários espectadores.</strong> Uma pessoa transmite e todas as outras assistem, cada uma com a sua conexão direta.</li>
+            <li><strong>Perfis de upload:</strong> Econômico, Equilibrado (padrão) e Qualidade, com um limite de upload total que você define.</li>
+            <li><strong>Estimativa de consumo de upload</strong>, mostrada antes e durante a transmissão, com base em quantos espectadores há na sala e no bitrate configurado.</li>
+            <li><strong>Ocupação da sala em tempo real</strong> (por exemplo, 3/8 participantes) para todos.</li>
+          </ul>
+          <h3>Melhorias</h3>
+          <ul>
+            <li>O upload é redistribuído entre os espectadores quando alguém entra ou sai durante a transmissão.</li>
+            <li>Com bitrate reduzido, o Pre-Live diminui a resolução e mantém 30 FPS em vez de insistir em 1080p a 60 FPS. Há um teto de 8 Mbps e um piso de 0,5 Mbps por espectador.</li>
+            <li>Mensagens mais claras quando a sala está cheia, tanto para quem tenta entrar quanto para o anfitrião que tenta aceitar mais alguém.</li>
+            <li>As estatísticas de envio somam todos os espectadores; perda e latência mostram o pior caso.</li>
+            <li>Aviso de que salas grandes consomem mais CPU e upload de quem transmite.</li>
+          </ul>
+          <h3>Correções</h3>
+          <ul><li>Nenhuma correção isolada nesta versão.</li></ul>
+          <h3>Compatibilidade</h3>
+          <ul>
+            <li>Quem continuar na 0.7.3 só cria salas de 2 pessoas e não entra em salas criadas pela 0.8.0 (e vice-versa). Para usar salas maiores, todos precisam atualizar.</li>
+            <li>Em salas com mais de 2 pessoas, só uma transmite por vez. Na sala de 2, os dois ainda podem transmitir.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="version-entry old">
+        <div>
+          <p class="version-tag" style="font-size:1.2rem">0.4 a 0.7.3</p>
+          <p class="pill">Desenvolvimento · não distribuídas</p>
+        </div>
+        <div>
+          <p>Antes da 0.8.0 o Pre-Live passou por versões de desenvolvimento que nunca foram publicadas como instalador. Em resumo: salas privadas com convites e transmissão direta entre dois computadores (0.4), apelidos, anfitrião, aprovação de entrada e tela de espectador (0.4.1), aplicativo para Windows (0.5), modo Estúdio com cenas (0.6) e revisão de segurança, diagnóstico de conexão e preparação do instalador (0.7). A 0.8.0 é a primeira versão pensada para chegar aos amigos.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Pre-Live · para Windows 10 e 11 · a voz fica no Discord</p>
+    <nav aria-label="Rodapé"><a href="./">Início</a><a href="baixar.html">Baixar</a><a href="faq.html">Dúvidas</a><a data-release-page>Versões no GitHub</a></nav>
+  </div>
+</footer>
+<script src="site.js"></script>
+</body>
+</html>

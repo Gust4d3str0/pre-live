@@ -1,0 +1,28 @@
+# Publishes ONLY the static download page (site/) to GitHub Pages. Does not build or release the app.
+# Enable first: repository Settings > Pages > Source: "GitHub Actions". Nothing runs until this file is pushed.
+name: Publicar página de download
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["site/**"]
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v4

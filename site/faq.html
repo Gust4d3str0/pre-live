@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dúvidas frequentes · Pre-Live</title>
+<meta name="description" content="Como criar uma sala, convidar amigos, como a transmissão funciona, o que fazer quando não conecta e como atualizar o Pre-Live.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0b0d14">
+<link rel="icon" type="image/png" href="assets/pre-live-icon-64.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/pre-live-icon-64.png" alt="" width="36" height="36">Pre-Live</a>
+    <nav aria-label="Principal">
+      <a href="./">Início</a>
+      <a href="baixar.html">Baixar</a>
+      <a href="novidades.html">Novidades</a>
+      <a href="faq.html" aria-current="page">Dúvidas</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+  <section>
+    <div class="wrap" style="max-width:860px">
+      <div class="section-head">
+        <p class="eyebrow">Dúvidas frequentes</p>
+        <h1 style="font-size:clamp(2.1rem,4.6vw,3.3rem)">Como usar o Pre-Live</h1>
+      </div>
+
+      <div class="faq-group">
+        <h2>Começando</h2>
+        <details id="criar-sala"><summary>Como criar uma sala?</summary>
+          <ol>
+            <li>Abra o Pre-Live e escolha <em>Criar sala</em>.</li>
+            <li>Digite o apelido que seus amigos vão ver.</li>
+            <li>Escolha quem pode entrar: quem tiver o convite, só com a sua aprovação, ou ninguém por enquanto.</li>
+            <li>Escolha quantas pessoas cabem na sala, contando com você: 2, 4, 8 ou 10. O padrão é 4. Você pode mudar depois em <em>Configurações da sala</em>.</li>
+            <li>Clique em <em>Criar sala</em>.</li>
+          </ol>
+        </details>
+        <details id="convidar"><summary>Como convido meus amigos?</summary>
+          <p>Em <em>Configurações da sala</em> você encontra o convite atual. Copie e mande pelo Discord ou por onde preferir. Quem recebeu abre o Pre-Live, escolhe <em>Entrar em sala</em> e cola o convite.</p>
+          <p>O convite tem prazo. Você pode renová-lo (o anterior deixa de valer) ou revogá-lo. Se alguém for expulso, todos os convites anteriores são invalidados.</p>
+        </details>
+        <details><summary>Quantas pessoas cabem numa sala?</summary>
+          <p>Até 10, contando com você. Uma pessoa transmite e as outras assistem. Na sala de 2, os dois podem transmitir ao mesmo tempo. Quando a sala enche, quem tenta entrar vê um aviso, e você pode aumentar o limite nas configurações.</p>
+        </details>
+        <details><summary>O Pre-Live substitui o Discord?</summary>
+          <p>Não. O Pre-Live só compartilha imagem. A conversa por voz continua no Discord, e o Pre-Live não se integra nem controla o Discord.</p>
+        </details>
+      </div>
+
+      <div class="faq-group">
+        <h2>Transmissão</h2>
+        <details id="transmissao"><summary>Como funciona a transmissão?</summary>
+          <p>Você escolhe o que capturar (um monitor ou uma janela) no seletor do próprio Windows e depois clica para iniciar o envio. Capturar e enviar são passos separados: nada sai do seu PC antes do segundo.</p>
+          <p>A imagem segue direto do seu computador para o de cada espectador (conexão WebRTC ponto a ponto). O servidor do Pre-Live só apresenta os participantes uns aos outros e não recebe imagem.</p>
+        </details>
+        <details><summary>Por que o upload sobe quando a sala é grande?</summary>
+          <p>Cada espectador recebe uma cópia própria do vídeo, enviada por quem transmite. Com 9 espectadores são 9 envios ao mesmo tempo. O Pre-Live mostra a estimativa de upload na tela antes de você começar.</p>
+          <p>Em <em>Configurações da sala → Perfil de upload</em> você escolhe Econômico (menor consumo), Equilibrado (o padrão) ou Qualidade (usa bem mais internet), e define um limite de upload total. O consumo nunca sobe sozinho.</p>
+        </details>
+        <details><summary>A transmissão está pesada ou travando.</summary>
+          <p>Baixe a resolução para 720p e o FPS para 30 nas configurações. Transmitir em 1080p usa bastante o processador. Em salas grandes, prefira o perfil Econômico ou Equilibrado.</p>
+        </details>
+        <details><summary>E o som?</summary>
+          <p>O áudio só é enviado se você marcar a opção e o seletor do Windows oferecer o áudio da fonte escolhida. O Pre-Live não usa microfone: a voz fica no Discord.</p>
+        </details>
+      </div>
+
+      <div class="faq-group">
+        <h2 id="nao-conecta">Não conecta, e agora?</h2>
+        <details><summary>Não consigo entrar na sala.</summary>
+          <ul>
+            <li>Confira se o convite está completo e dentro do prazo; peça ao anfitrião para renová-lo.</li>
+            <li>Se aparecer “sala cheia”, peça ao anfitrião para aumentar o limite ou espere alguém sair.</li>
+            <li>Se a sala usa aprovação, aguarde o anfitrião aceitar.</li>
+            <li>Se aparecer que o servidor está acordando, espere: o servidor gratuito que apresenta os participantes dorme quando não é usado e pode levar até 1 minuto para responder na primeira vez.</li>
+          </ul>
+        </details>
+        <details><summary>Entrei, mas a imagem não aparece.</summary>
+          <ul>
+            <li>Veja a linha de estado da sala: ela mostra se a sinalização e o WebRTC estão conectados.</li>
+            <li>Tente <em>Reconectar mídia</em>.</li>
+            <li>Redes muito restritivas (CGNAT, rede de empresa, algumas VPNs) podem impedir a conexão direta. <strong>Ainda não existe servidor de retransmissão</strong>, então nesses casos não há alternativa automática. Tente outra rede, como a conexão do celular, ou desligue a VPN.</li>
+            <li>Conexões entre redes diferentes ainda estão sendo validadas; se não conectar, avise quem organiza o teste com a mensagem que o Pre-Live mostrou.</li>
+          </ul>
+        </details>
+      </div>
+
+      <div class="faq-group">
+        <h2>Instalação e atualização</h2>
+        <details id="atualizar"><summary>Como atualizo o aplicativo?</summary>
+          <p>Quando houver versão nova, o Pre-Live avisa na tela e abre a página de download. Ele nunca baixa nem instala nada sozinho. Baixe o novo instalador em <a href="baixar.html">Baixar</a>, confira o SHA-256 e execute.</p>
+          <p>Todos da sala precisam da mesma geração do aplicativo: a 0.8.0 e a 0.7.3 não entram nas salas uma da outra.</p>
+        </details>
+        <details><summary>O Windows mostrou um aviso ao instalar. É seguro?</summary>
+          <p>O aviso aparece porque o instalador não tem assinatura digital paga. Não desative o SmartScreen nem o antivírus. Confira o SHA-256 na <a href="baixar.html#seguranca">página de download</a> e instale somente se for idêntico. Se não for, não instale.</p>
+        </details>
+        <details><summary>Como desinstalar?</summary>
+          <p>Configurações do Windows → Aplicativos → Aplicativos instalados → Pre-Live → Desinstalar.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Pre-Live · para Windows 10 e 11 · a voz fica no Discord</p>
+    <nav aria-label="Rodapé"><a href="./">Início</a><a href="baixar.html">Baixar</a><a href="novidades.html">Novidades</a><a data-release-page>Versões no GitHub</a></nav>
+  </div>
+</footer>
+<script src="site.js"></script>
+</body>
+</html>
